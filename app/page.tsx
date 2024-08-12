@@ -1,12 +1,12 @@
-
 import { Patientform } from "@/components/forms/Patientform";
 import Image from "next/image";
 import Link from "next/link";
 
-
 export default function Home() {
   return (
     <div className="flex h-screen max-h-screen">
+      {/* TODO: OTP Verification | Passkey */}
+
       <section className="remove-scrollbar container my-auto">
         <div className="sub-container max-w-[496px]">
           <Image 
