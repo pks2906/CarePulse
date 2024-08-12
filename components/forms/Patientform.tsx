@@ -13,4 +13,4 @@ export const Patientform = () => {
   )
 }
 
-export default Patientform
+export default Patientform 
