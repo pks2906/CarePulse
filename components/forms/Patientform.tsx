@@ -8,7 +8,13 @@ import {Form} from "@/components/ui/form"
 import CustomFromField from "../CustomFromField"
 
 export enum FormFieldType {
-  INPUT = 'input'
+  INPUT = 'input',
+  TEXTAREA =  'textarea',
+  PHONE_INPUT= 'phoneinput',
+  CHECKBOX= 'checkbox',
+  DATE_PICKER = 'datePicker',
+  SELECT = 'select',
+  SKELETON = 'skeleton',
 }
 
  
@@ -43,6 +49,12 @@ const Patientform  = () => {
           fieldType={FormFieldType.INPUT}
 
           control={form.control}
+
+          name="name"
+          label="full name"
+          placeholder="John Doe"
+          iconSrc="/assets/icons/user.svg"
+          iconAlt="user"
         />
 
         <Button type="submit">Submit</Button>
