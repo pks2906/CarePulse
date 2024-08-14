@@ -15,7 +15,7 @@ export enum FormFieldType {
   DATE_PICKER = 'datePicker',
   SELECT = 'select',
   SKELETON = 'skeleton',
-}
+} 
 
 
 const formSchema = z.object({
