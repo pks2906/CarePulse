@@ -23,7 +23,7 @@ const formSchema = z.object({
     message: "Username must be at least 2 characters.",
   }),
 })
- 
+
 const Patientform  = () => {
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
@@ -31,7 +31,7 @@ const Patientform  = () => {
       username: "",
     },
   })
- 
+    
 
   function onSubmit(values: z.infer<typeof formSchema>) {
     console.log(values)
