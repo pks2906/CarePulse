@@ -52,7 +52,7 @@ const Patientform  = () => {
 
           name="name"
           label="full name"
-          placeholder="John Doe"
+          placeholder="Pratik Sinha"
           iconSrc="/assets/icons/user.svg"
           iconAlt="user"
         />
