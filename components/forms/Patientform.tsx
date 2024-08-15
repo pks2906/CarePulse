@@ -59,7 +59,7 @@ const Patientform  = () => {
 
         <Button type="submit">Submit</Button>
       </form>
-    </Form>
+    </Form>  
   )
 }
 
