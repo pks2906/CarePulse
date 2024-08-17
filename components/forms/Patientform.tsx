@@ -8,6 +8,7 @@ import {Form} from "@/components/ui/form"
 import CustomFromField from "../CustomFromField"
 import SubmitButton from "../SubmitButton"
 import { useState } from "react"
+import { UserFromvalidation } from "@/lib/validation"
 
 export enum FormFieldType {
   INPUT = 'input',
@@ -20,25 +21,31 @@ export enum FormFieldType {
 } 
 
 
-const formSchema = z.object({
-  username: z.string().min(2, {
-    message: "Username must be at least 2 characters.",
-  }),
-})
+
 
 const Patientform  = () => {
 
   const [isLoading, setIsLoading] = useState(false);
-  const form = useForm<z.infer<typeof formSchema>>({ 
-    resolver: zodResolver(formSchema),
+  const form = useForm<z.infer<typeof UserFromvalidation>>({ 
+    resolver: zodResolver(UserFromvalidation),
     defaultValues: {
-      username: "",
+      name: "",
+      email: "",
+      phone: "", 
     },
   })
     
 
-  function onSubmit(values: z.infer<typeof formSchema>) {
-    console.log(values)
+  async  function onSubmit({ name, email, phone }: z.infer<typeof UserFromvalidation>) {
+    setIsLoading(true);
+
+    try {
+      const userData = { name, email, phone }; 
+      
+    } catch (error) {
+      console.log(error);
+      
+    }
   }
   return (
       <Form {...form}>
